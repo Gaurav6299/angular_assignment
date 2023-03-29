@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div>
+    <span class="arrow_back" (click)="backToProfile()"><-</span>
+  </div>
+
+  <div data-aos="fade-left">
+    <div class="avatars_profile">
+      <span>
+        <img src="{{ imagePath }}" alt="" />
+      </span>
+      <p class="avatar mx-3">{{ name }}</p>
+    </div>
+
+    <h3 class="mt-4 roomCode">Type room code below</h3>
+
+    <div class="type-here">
+      <input
+        type="text"
+        placeholder="-Type here-"
+        onkeypress="return event.charCode>=48 && event.charCode<=57" [(ngModel)]="code"
+      />
+    </div>
+
+    <button style="margin-left: 5rem;" class="next"
+      [routerLink]="['/profile']"
+    >
+      Next
+    </button>
+  </div>
+</div>

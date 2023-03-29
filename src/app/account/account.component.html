@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div>
+    <span class="arrow_back" (click)="backToProfile()"><-</span>
+  </div>
+
+  <div data-aos="fade-right">
+    <div class="avatars_profile">
+      <span>
+        <img src="{{ imagePath }}" alt="" />
+      </span>
+      <p class="avatar mx-3">{{ name }}</p>
+    </div>
+
+    <div>
+      <button class="next isActive btn-join" [routerLink]="['/join-room']">Join a Room</button>
+    </div>
+
+    <div class="mt-4">
+      <button class="next isActive btn-join" [routerLink]="['/create-room']">Create a Room</button>
+    </div>
+  </div>
+</div>

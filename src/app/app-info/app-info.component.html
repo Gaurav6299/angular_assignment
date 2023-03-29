@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <!-- <div data-aos="fade-up"> -->
+    <h2 class="headline">What is your name?</h2>
+    <div class="type-here">
+      <input
+        type="text"
+        placeholder="-Type here-"
+        onkeypress="return ((event.charCode>=65 && event.charCode<=90) || (event.charCode>=97 && event.charCode<=122))"
+        [(ngModel)]="name"
+      />
+    </div>
+    <button
+      [ngClass]="{ isActive: name, next: true }"
+      [routerLink]="['/profile']"
+      (click)="goToNext()"
+      [disabled]="name === '' ? true : false"
+    >
+      Next
+    </button>
+  <!-- </div> -->
+</div>

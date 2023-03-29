@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div>
+    <span class="arrow_back" (click)="backToAppInfo()"><-</span>
+  </div>
+  <div data-aos="fade-up">
+    <h2 class="profile">Hello {{ name | titlecase }}</h2>
+    <p class="avatar">Choose your avatar</p>
+
+    <div class="avatars_profile mt-5">
+      <div class="mx-3">
+        <img src="{{ path1 }}" alt="" (click)="chooseAvatar(path1)" />
+      </div>
+      <div class="avatar_logo mx-2">
+        <img src="{{ path2 }}" alt="" (click)="chooseAvatar(path1)" />
+      </div>
+      <div class="mx-3 avatar_logo">
+        <img src="{{ path3 }}" alt="" (click)="chooseAvatar(path1)" />
+      </div>
+      <div class="mx-3 avatar_logo">
+        <img src="{{ path4 }}" alt="" (click)="chooseAvatar(path1)" />
+      </div>
+      <div class="mx-3 avatar_logo">
+        <img src="{{ path5 }}" alt="" (click)="chooseAvatar(path1)" />
+      </div>
+    </div>
+    <button
+      style="margin-left: 20rem; margin-top: 45px"
+      [ngClass]="{
+        isActive: imagePath,
+        next: true
+      }"
+      (click)="goToNext()"
+      [disabled]="!imagePath ? true : false"
+    >
+      Next
+    </button>
+  </div>
+</div>
